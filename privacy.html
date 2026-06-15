@@ -92,7 +92,7 @@
         </p>
 
         <h2>2. 収集するデータ</h2>
-        <p>本アプリでは、以下のデータのみを収集・利用しています。</p>
+        <p>本アプリでは、以下のデータを収集・利用しています。</p>
 
         <h3>（1）アプリ内データ</h3>
         <ul>
@@ -102,44 +102,54 @@
             <li><strong>図鑑状態</strong>：どの世界遺産に遭遇したか、詳細を見たかという進捗状況</li>
         </ul>
         <div class="note">
-            これらのデータは<strong>デバイスのローカルストレージ（AsyncStorage）にのみ保存</strong>され、外部サーバーに送信されることはありません。
+            これらのデータは<strong>デバイスのローカルストレージ（AsyncStorage）にのみ保存</strong>され、開発者の外部サーバーに送信されることはありません。
+        </div>
+
+        <h3>（2）広告配信に関する情報</h3>
+        <p>
+            本アプリは、無料で提供するために Google の広告配信サービス「Google AdMob」を利用して広告を表示します。
+            広告配信のため、Google および AdMob は<strong>広告識別子（Android の広告 ID、iOS の IDFA）、IP アドレス、端末情報、広告の表示・操作に関する情報</strong>などを収集・利用する場合があります。
+        </p>
+        <div class="note">
+            これらの情報は Google によって取得・管理されます。Google によるデータの取扱いの詳細は
+            <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">「Google のサービスを使用するサイトやアプリから収集した情報の Google による使用」</a>
+            をご確認ください。広告のパーソナライズは、端末の設定（Android：広告 ID のリセット／iOS：トラッキングの許可設定）からオプトアウトできます。
         </div>
 
         <h2>3. 収集しないデータ</h2>
-        <p>本アプリでは、以下のデータを一切収集していません。</p>
+        <p>本アプリ（開発者）自身は、以下のデータを収集していません。</p>
         <ul>
             <li><strong>位置情報</strong>：地図機能はユーザーの手動操作のみで、GPSによる現在地の取得は行いません</li>
             <li><strong>個人情報</strong>：氏名、メールアドレス、電話番号など、ユーザーを特定できる情報</li>
-            <li><strong>端末識別情報</strong>：IDFA、advertising ID などの追跡用識別子</li>
-            <li><strong>行動追跡データ</strong>：ユーザーの操作履歴の分析データ</li>
-            <li><strong>Cookieや追跡技術</strong>によるデータ収集</li>
+            <li><strong>行動分析データ</strong>：開発者独自によるユーザーの操作履歴の分析は行いません</li>
         </ul>
 
         <div class="note">
-            <strong>Analytics系ツールは未使用</strong>です。Google Analytics、Firebase Analytics などの行動分析ツールは導入しておらず、ユーザーの行動データを収集・分析していません。
-        </div>
-
-        <div class="note">
-            <strong>広告・課金は未実装</strong>です。本アプリには、現時点では広告配信機能およびアプリ内課金機能は実装されていません。
+            <strong>開発者独自の Analytics は未使用</strong>です。Google Analytics、Firebase Analytics などの行動分析ツールは導入していません。
+            ただし、上記「2.（2）広告配信に関する情報」のとおり、広告配信（Google AdMob）に伴い Google によるデータの収集・利用が行われます。
         </div>
 
         <h2>4. データの保存方法</h2>
         <ul>
-            <li>本アプリのデータは<strong>すべてデバイス内に保存</strong>されます</li>
-            <li>外部サーバーへのデータ送信は行いません</li>
-            <li>アプリを削除すると、保存されていたデータも削除されます</li>
-            <li>データは他のアプリと共有されることはありません</li>
+            <li>アプリ内で生成されるデータ（お気に入り・行ってみたい・閲覧履歴・図鑑状態）は<strong>すべてデバイス内に保存</strong>されます</li>
+            <li>これらのデータが開発者の外部サーバーへ送信されることはありません</li>
+            <li>アプリを削除すると、デバイス内に保存されていたデータも削除されます</li>
         </ul>
+        <div class="note">
+            なお、広告配信に関する情報（上記「2.（2）」）は、Google AdMob を通じて Google 側で取り扱われます。
+        </div>
 
         <h2>5. 第三者提供</h2>
         <p>
-            本アプリで収集したデータを第三者に提供することはありません。
-            ただし、法令に基づく場合など正当な理由がある場合はこの限りではありません。
+            開発者がアプリ内で取得したデータ（お気に入り・履歴等）を、開発者から第三者に提供することはありません。
+            ただし、本アプリは広告配信のため Google AdMob を利用しており、広告配信に必要な情報は Google により取得・利用されます（上記「2.（2）広告配信に関する情報」を参照）。
+            また、法令に基づく場合など正当な理由がある場合はこの限りではありません。
         </p>
 
         <h2>6. 外部サービス</h2>
         <p>本アプリでは以下の外部サービスを利用しています。</p>
         <ul>
+            <li><strong>Google AdMob</strong>：広告の配信（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>）</li>
             <li><strong>Wikimedia Commons</strong>：世界遺産の画像データの取得（画像の閲覧のみ）</li>
             <li><strong>MapLibre</strong>：地図データの表示（オープンソースの地図ライブラリ）</li>
         </ul>
@@ -170,7 +180,7 @@
             <li>アプリストアのレビュー機能を通じてのお問い合わせ</li>
         </ul>
 
-        <p class="last-updated">最終更新日: 2025年1月29日</p>
+        <p class="last-updated">最終更新日: 2026年6月15日</p>
     </div>
 </body>
 </html>
